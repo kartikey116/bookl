@@ -7,7 +7,7 @@ const mockExperiences: Experience[] = [
     title: "Kayaking Adventure",
     location: "Udupi, Karnataka",
     price: 999,
-    image: "/images/kayak.jpg",
+    image: "/kayak.svg",
     short: "Certified guide. Safety first with gear included.",
   },
   {
@@ -15,7 +15,7 @@ const mockExperiences: Experience[] = [
     title: "Nandi Hills Sunrise",
     location: "Bangalore, Karnataka",
     price: 899,
-    image: "/images/nandi.jpg",
+    image: "/nandi.svg",
     short: "Perfect sunrise experience with expert guide.",
   },
   {
@@ -23,7 +23,7 @@ const mockExperiences: Experience[] = [
     title: "Coffee Trail",
     location: "Coorg, Karnataka",
     price: 1299,
-    image: "/images/coffee.jpg",
+    image: "/coffe.svg",
     short: "Explore Coorg’s coffee estates and local culture.",
   },
   {
@@ -36,16 +36,15 @@ const mockExperiences: Experience[] = [
   },
 ];
 
-// ✅ Fetch list of all experiences
+
 export const fetchExperiences = async (): Promise<Experience[]> =>
   new Promise((res) => setTimeout(() => res(mockExperiences), 400));
 
-// ✅ Fetch details of one experience dynamically
+
 export const fetchExperienceDetails = async (id: string): Promise<ExperienceDetails> => {
   const experience = mockExperiences.find((e) => e.id === id);
   if (!experience) throw new Error("Experience not found");
 
-  // Add custom data for each experience
   const extraDetails: Record<string, Partial<ExperienceDetails>> = {
     "1": {
       description:
@@ -118,7 +117,7 @@ export const fetchExperienceDetails = async (id: string): Promise<ExperienceDeta
   );
 };
 
-// ✅ Create a new booking
+
 export const createBooking = async (payload: any): Promise<BookingResponse> =>
   new Promise((res, rej) =>
     setTimeout(() => {

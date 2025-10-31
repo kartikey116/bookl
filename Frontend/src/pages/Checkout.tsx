@@ -62,13 +62,13 @@ const payload = {
 };
 
 try {
-  // Try real API first
+  
   const res = await api.post("/bookings", payload);
   navigate("/result", {
     state: { success: true, refId: res.data.bookingId || res.data.refId },
   });
 } catch (err) {
-  // Fallback to mock API
+  
   try {
     const r: BookingResponse = await mockCreateBooking(payload);
     navigate("/result", {
@@ -85,7 +85,7 @@ try {
 };
 
 return ( <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8">
-{/* Left side - form */} <div className="lg:col-span-2"> <div className="bg-white rounded-xl p-6 shadow"> <h2 className="font-semibold text-lg mb-4">Checkout</h2>
+<div className="lg:col-span-2"> <div className="bg-white rounded-xl p-6 shadow"> <h2 className="font-semibold text-lg mb-4">Checkout</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input
@@ -140,7 +140,7 @@ return ( <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8">
     </div>
   </div>
 
-  {/* Right side - summary */}
+  
   <aside>
     <div className="bg-white rounded-xl p-6 shadow">
       <div className="flex justify-between">
