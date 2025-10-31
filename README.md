@@ -79,7 +79,7 @@ bookit/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/bookit.git
+git clone https://github.com/kartikey116/bookit.git
 cd bookit
 ```
 
@@ -228,6 +228,6 @@ Example:
 
 **Kartikey Upadhyay**
 Fullstack Developer | MERN + TypeScript
-[GitHub](https://github.com/kartikey116) • [LinkedIn](https://linkedin.com/in/kartikey116)
+[GitHub](https://github.com/kartikey116) • [LinkedIn](https://www.linkedin.com/in/kartikey-upadhyay/)
 
 
