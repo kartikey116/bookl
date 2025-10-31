@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { fetchExperienceDetails } from "../api/mockApi";
 import type { ExperienceDetails, Slot } from "../types";
@@ -39,7 +39,7 @@ const taxes = Math.round(subtotal * 0.06);
 const total = subtotal + taxes;
 
 return ( <div className="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-8">
-{/* Left side */} <div> <img
+ <div> <img
        src={experience.image}
        alt={experience.title}
        className="w-full rounded-lg h-[360px] object-cover mb-6"
@@ -49,7 +49,7 @@ return ( <div className="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-8">
     <h1 className="text-2xl font-semibold">{experience.title}</h1>
     <p className="text-gray-500 mt-2">{experience.description}</p>
 
-    {/* Dates */}
+
     <div className="mt-8">
       <h2 className="font-medium text-gray-700 mb-3">Choose date</h2>
       <div className="flex flex-wrap gap-3">
@@ -75,7 +75,7 @@ return ( <div className="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-8">
       </div>
     </div>
 
-    {/* Slots */}
+
     {selectedDate && (
       <div className="mt-8">
         <h2 className="font-medium text-gray-700 mb-3">Choose time</h2>
@@ -113,7 +113,7 @@ return ( <div className="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-8">
       </div>
     )}
 
-    {/* About */}
+
     <div className="mt-10">
       <h2 className="font-medium text-gray-700 mb-3">About</h2>
       <div className="bg-gray-100 rounded-md px-4 py-3 text-gray-600 text-sm">
@@ -122,7 +122,6 @@ return ( <div className="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-8">
     </div>
   </div>
 
-  {/* Right side (Booking Summary) */}
   <div className="border rounded-xl p-6 bg-gray-50 h-fit">
     <div className="space-y-3 text-sm text-gray-600">
       <div className="flex justify-between">

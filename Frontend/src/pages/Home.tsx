@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ExperienceCard from "../components/ExperienceCard";
 import LoadingPlaceholder from "../components/LoadingPlaceholder";
 import { fetchExperiences } from "../api/mockApi";
@@ -10,7 +10,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Try real API first, fallback to mock
+
     api.get("/experiences")
       .then((res) => {
         setItems(res.data.map((e: any) => ({ id: e._id || e.id, title: e.title, location: e.location, price: e.price, image: e.imageUrl || e.image })));
