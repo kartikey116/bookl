@@ -4,12 +4,11 @@ const BookingSchema = new mongoose.Schema(
   {
     experience: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Experience', // Links to the Experience model
+      ref: 'Experience',
       required: true,
     },
     slotId: {
-      type: mongoose.Schema.Types.ObjectId, // This is the _id of the slot in the Experience.slots array
-      required: true,
+      type: mongoose.Schema.Types.ObjectId,
     },
     name: {
       type: String,
@@ -33,7 +32,6 @@ const BookingSchema = new mongoose.Schema(
   }
 );
 
-// Prevent double-booking for the same slot and email
 BookingSchema.index({ slotId: 1, email: 1 }, { unique: true });
 
 export default mongoose.model('Booking', BookingSchema);

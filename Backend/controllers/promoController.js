@@ -20,7 +20,7 @@ const validatePromoCode = asyncHandler(async (req, res, next) => {
   }
 
   if (promo.isFlat) {
-    // As noted, we'll stick to percentage-based for this project
+ 
     res.status(400);
     throw new Error('This promo code type is not supported.');
   }
